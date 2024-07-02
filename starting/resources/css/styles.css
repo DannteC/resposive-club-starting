@@ -1,0 +1,399 @@
+.html {
+    font-size: 16px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('../images/background.jpg'); /* Specify the background image URL */
+    background-size: cover; /* Cover the entire background */
+    background-repeat: no-repeat; /* Prevent background image from repeating */
+    background-position: center center; /* Center the background image */
+    background-attachment: fixed; /* Keep the background image fixed while scrolling */
+    font-family: "Actor", sans-serif;
+}
+
+p, li{
+    line-height: 1.5rem;
+    font-size: 1.25rem;
+    word-spacing: 0.3rem;
+    letter-spacing: 0.1rem;
+}
+
+p, ol, li, h1, h2, h3 {
+    color: aliceblue;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-family: "Black Ops One", system-ui;
+}
+
+h2 {
+    font-size: 1.75rem;
+}
+
+/* Banner Section */
+.banner {
+    position: relative; 
+    width: 100%;
+    height: auto;
+    max-height: 55rem;
+    overflow: hidden;
+}
+
+.banner-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; 
+}
+
+.logo-img {
+    position: absolute; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+}
+
+.logo-img img {
+    max-width: 25rem; 
+    max-height: 25rem; 
+    width: auto;
+    height: auto;
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .logo-img img {
+        max-width: 100%; /* Adjust logo size for smaller screens */
+    }
+}
+/* Nav Section */
+
+.navbar {
+    background-color: #333; 
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-list {
+    display: flex; 
+    flex-wrap: wrap;
+    list-style: none; 
+    margin: 0; 
+    padding: 0; 
+    justify-content: center;
+}
+
+.nav-item {
+    margin: 0 2rem; 
+}
+
+.nav-item a {
+    font-size: 1.5rem;
+    color: white; 
+    text-decoration: none; 
+    padding: 1rem 1.25rem; 
+    display: block; 
+    transition: background-color 0.5s; 
+}
+
+.nav-item a:hover {
+    background-color: #6902a5; 
+}
+
+/* Welcome Section */
+
+.welcome-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.5rem;
+}
+
+.welcome-text {
+    margin-bottom: 1.5rem;
+    text-align: center;
+    
+}
+
+.welcome-img {
+    display: flex;
+    justify-content: center; 
+    gap: 1.2rem;
+    width: 100%; 
+    max-width: 80rem; 
+    flex-wrap: nowrap; 
+    margin: 0 auto; 
+}
+
+.activity {
+    display: inline-block;
+    text-align: center;
+    margin: 0.5rem;
+    flex: 1 1 20rem; 
+    max-width: 15rem; 
+}
+
+.activity img {
+    width: 100%; 
+    max-width: 100%; 
+    height: auto;
+    border-radius: 0.8rem;
+    box-shadow: 0 0.62rem 0.62rem rgba(0, 0, 0, 0.1);
+}
+
+.activity.middle {
+    flex: 2 1 30rem; 
+    max-width: 30rem; 
+}
+
+.activity.middle img {
+    width: 100%; 
+    max-width: 100%; 
+}
+
+.activity h3 {
+    margin-top: 1rem;
+    font-size: 1.7em;
+}
+
+/* Responsive Design */
+
+@media (max-width: 1200px) {
+    .welcome-section {
+        display: flex;
+        align-items: center;
+        padding: 0.5rem;
+        
+    }
+    .activity {
+        flex-basis: calc(20% - 1.5rem); 
+        max-width: calc(20% - 1.5rem); 
+    }
+    .activity.middle {
+        flex-basis: 50%; 
+        max-width: 50%; 
+    }
+}
+
+@media (max-width: 768px) {
+    .welcome-img {
+        flex-direction: column; 
+        align-items: center;
+    }
+    .activity {
+        flex-basis: calc(100% - 1.5rem); 
+        max-width: calc(100% - 1.5rem); 
+    }
+    .activity.middle {
+        flex-basis: calc(100% - 1.5rem); 
+        max-width: calc(100% - 1.5rem); 
+    }
+}
+
+/*  Mission / History */
+
+.HM-section {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+.HMText-section {
+    flex: 1 1 50%; 
+    box-sizing: border-box;
+    padding: 0.625rem; 
+  }
+  
+  @media (max-width: 768px) {
+    .HM-section {
+        flex-direction: column; /* Stack the columns vertically */
+    }
+    .HMText-section {
+        padding: 10px; /* Add some padding for better readability */
+    }
+    .HMText-section p, .HMText-section li {
+        line-height: 1rem;
+        font-size: 1rem; /* Smaller font size */
+        word-spacing: 0.1rem;
+        letter-spacing: 0.1rem;
+    }
+  }
+
+  /* Leaders Section */
+
+  .leaders {
+    display: flex;
+    flex-wrap: nowrap; /* Ensure items stay in a single row */
+    justify-content: center; /* Center items horizontally */
+    overflow-x: auto; /* Enable horizontal scrolling on smaller screens */
+  }
+
+  .img-container {
+    position: relative;
+    flex: 1 1 30%; /* Allow items to grow and shrink equally, starting with a base width */
+    max-width: 30%; /* Set a maximum width to ensure consistency */
+    margin: 1rem; /* Add margin around each item for spacing */
+    aspect-ratio: 1;
+  }
+  
+  .img-container img {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    max-height: 30rem; /* Set maximum height for the images */
+    display: block; /* Remove extra space caused by inline elements */
+    object-fit: cover; /* Cover the container while maintaining aspect ratio */
+    border: 0.18rem solid #333;
+    border-radius: 2rem;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .img-container:hover img {
+    transform: scale(1.05); /* Scale up the image slightly on hover */
+  }
+
+  .img-container .leader-name {
+    position: absolute; /* Position the text absolutely over the image */
+    bottom: 0; /* Align at the bottom */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Adjust for center alignment */
+    text-align: center; /* Center text horizontally */
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background for better readability */
+    color: white; /* Text color */
+    padding: 0.3rem; /* Padding around the text */
+    font-weight: bold; /* Bold font */
+    opacity: 0; /* Initially hide the text */
+    transition: opacity 0.3s ease-in-out; /* Smooth transition for opacity */
+  }
+  
+  .img-container:hover .leader-name {
+    opacity: 1; /* Show text on hover */
+  }
+  
+  @media (max-width: 768px) {
+    .leaders {
+      flex-wrap: wrap; /* Ensure items stay in a single row on smaller screens */
+      overflow-x: auto; /* Enable horizontal scrolling if needed */
+    }
+    
+    .img-container {
+      flex: 0 0 auto; /* Allow items to grow and shrink, but not smaller than their content */
+      max-width: 100%; /* Ensure items do not exceed 100% of their container */
+      margin: 1 0.5rem; /* Adjust margin for smaller screens */
+      padding: 0 1rem;
+      aspect-ratio: auto;
+    }
+  }
+
+   /* Events Section */
+
+  .register-button {
+    display: inline-block;
+    justify-content: center;
+    margin-top: 1.25rem;
+    padding: 0.625rem 1.25rem;
+    font-size: 1rem;
+    color: white;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 0.312rem;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    box-shadow: 0 0.312rem;
+    transition: background-color 0.3s ease;
+}
+
+/* Styles for the registration button */
+.register-button {
+    display: inline-block;
+    margin: 0.93rem 0.93rem;
+    padding: 1.5rem 3.5rem;
+    font-size: 2rem;
+    color: rgb(255, 255, 255);
+    background-color: #333;
+    border: 0.06rem solid black;
+    border-radius: 0.312rem;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    box-shadow: 0 0.312rem;
+    transition: background-color 0.3s ease;
+}
+
+.register-button:hover {
+    background-color: #6902a5;
+}
+
+.register-button:active {
+    margin-top: 1.25rem;
+    box-shadow: 0 0;
+    color: rgb(255, 255, 255);
+}
+
+/* Center the button */
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 1.25rem;
+}
+
+/* Gallery Section */
+
+.gallery-section {
+    padding: 1.25rem;
+    display: flex;
+    justify-content: center;
+}
+
+.gallery-table {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    justify-content: center;
+    gap: 1rem; /* Adjust spacing between cells */
+}
+
+.gallery-cell {
+    padding: 0;
+    vertical-align: top;
+    flex: 1 1 22rem; /* Allow cells to grow and shrink */
+    max-width: 22rem; /* Set maximum width */
+}
+
+.gallery-cell img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    max-width: 100%;
+}
+
+@media (max-width: 768px) {
+    .gallery-table {
+        display: block; /* Switch to block layout for smaller screens */
+    }
+
+    .gallery-cell {
+        display: block; /* Display cells as blocks */
+        width: 100%; /* Ensure cells take full width */
+        margin-bottom: 1.25rem; /* Add margin between cells */
+    }
+}
+
+/* Contact Info Section */
+
+.contact-section {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.contact-text {
+    flex: 1 1 50%; 
+    box-sizing: border-box;
+    padding: 0.625rem; 
+}
+
+
+
